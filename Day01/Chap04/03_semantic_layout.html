@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic layout - 시맨틱 레이아웃</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }   /* 전체 영역에 적용 */
+
+        header{
+            background-color: rgb(64, 6, 141);
+            height: 80px;
+        }
+        nav{   }
+        nav a{
+            text-decoration : none;
+            color: #e8e0e0;
+            float: left;
+            display: block;
+            width: 100px;
+            height: 100%;
+            padding: 10px 20px;
+            line-height: 60px;
+            text-align: center;
+            }
+            nav a:hover{
+                background-color: rgb(97, 10, 116);
+            }
+
+        section{           
+            margin: 0 auto;
+            width: 1024px;
+            background-color: rgb(244, 239, 251);
+            border: 1px solid rgb(223, 200, 248);
+            padding: 10px;
+            min-height: 200px;
+        }
+
+        footer{
+            background-color: rgb(223, 218, 218);
+            min-height: 80px;            
+        }
+        footer .copy{
+            float: left;
+            line-height: 80px;
+            padding: 0 20px;
+        }
+        footer .family{
+            float: right;
+            line-height: 80px;
+            min-width: 120px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="http://www.naver.com">네이버</a>
+            <a href="http://www.kakao.com">카카오</a>
+            <a href="http://www.youtube.com">유투브</a>
+        </nav>
+    </header>
+    <section>
+        <h1>My page</h1>
+        <p>My page에 오신 걸 환영합니다.</p>
+    </section>
+    <section>
+        <h1>2번째 섹션</h1>
+        <p>2번째 영역입니다.</p>
+        <article>
+            밤이 당신은 풀이 까닭이요, 패, 쓸쓸함과 같이 있습니다. 별 무덤 너무나 쓸쓸함과 거외다. 했던 불러 그리워 이름을 마리아 있습니다. 피어나듯이 벌레는 어머님, 계집애들의 있습니다. 패, 별들을 하나의 멀듯이, 이름을 아직 계십니다. 마디씩 새워 무성할 가을 너무나 차 봅니다. 아이들의 한 덮어 그러나 별빛이 이런 까닭이요, 헤일 헤는 듯합니다. 헤일 사람들의 노루, 무엇인지 둘 우는 가을로 거외다. 내 멀듯이, 차 하나의 어머니, 별 위에 별 듯합니다.
+        </article>
+    </section>
+    <section>
+        <h1>3번째 섹션</h1>
+        <p>3번째 영역입니다.</p>
+    </section>
+    <footer>
+        <p class="copy">Copyright ⓒ CKS Allrights reserved. </p>
+        <p class="family">
+            <select name="family">
+                <option value="1">네이버</option>
+                <option value="2">카카오</option>
+                <option value="3">유투브</option>
+            </select>
+        </p>
+    </footer>
+</body>
+</html>

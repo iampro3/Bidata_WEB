@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML 레이아웃</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;}  /* 윈도우 창의 상하좌우 여백 0 */
+        .header{
+            background-color:azure; /* bac */
+            padding: 30px;      /* p30 */
+            text-align: center; /* tac */
+            font-size: 24px;    /* fz24 */
+        }
+
+        .left-side{
+            float: left;    /* fl 입력 */
+            background-color: honeydew;
+            width: 25%;
+            padding: 10px;
+            height: 300px;  /* h300입력 */
+        }
+            
+        .main{
+            float: left;    /* fl 입력 */
+            background-color: rgb(247, 229, 250);
+            width: 50%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .right-side{
+            float: left;    /* fl 입력 */
+            background-color: honeydew;
+            width: 25%;
+            padding: 10px;
+            height: 300px;
+        }
+
+        .container::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .footer{
+            background-color: rgb(244, 239, 252);
+            pd: 10px;
+            text-align: center;
+            height: 100px;
+            line-height: 100;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h2>HEADER</h2>
+    </div>
+
+    <div class="container">
+        <div class="left-side">Left Side</div>
+        <div class="main">Main</div>
+        <div class="right-side">Right Side</div>
+    </div>
+
+     <div class="footer">
+        <p>FOOTER</p>
+     </div>
+</body>
+</html>
