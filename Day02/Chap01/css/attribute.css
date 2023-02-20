@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+section {
+    margin: 20px 0;
+}
+
+
+/*
+    [속성]  {   }
+    [속성='A']  {   }       : 속성='A' 요소를 선택
+    [속성^='A']  {   }      : 속성='A'로 시작하는 요소 선택
+    [속성$='A']  {   }      : 속성='A'로 끝나는 요소 선택
+    [속성*='A']  {   }      : 속성='A'로 포함되는 요소 선택
+
+*/
+
+/* TODO: 여기에 작성해보세요 */
+/*  section 태그, 속성명 id, 속성값:2 */
+section[id$='2'] { 
+    background-color: blueviolet;
+    padding: 10px;
+}
+
+div[class]{
+    padding: 5px;
+    margin: 5px;
+    bottom: 1px solid #ccc;
+}
+
+/* 속성값이 '1'로 시작하는 경우 */
+div[class^='1']{background-color: darkorange;}
+
+/* 속성값이 'i'로 시작하는 경우 */
+div[class*='i']{background-color: rgb(173, 226, 175);}
+
+/* 속성값이 '4'로 시작하는 경우 */
+div[class$='4']{background-color: rgb(229, 186, 220);}
+
+/* 속성값이 'e'가 포함되고, 
+    속성값이 '2'로 끝나는 경우 */
+    div[class*='e'][class$='2']{
+        background-color: coral;
+        color: darkcyan;
+    }

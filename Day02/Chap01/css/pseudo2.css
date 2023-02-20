@@ -1,0 +1,138 @@
+@charset "UTF-8";
+
+/* TODO: 여기에 작성해보세요 */
+table.first{
+    width: 100%;
+    border-collapse: collapse;/* 이중실선 제거 */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 5px 5px 10px rgb(199, 198, 196);
+    /* 그림자 : x축 y축 블러 색상 */
+}
+
+table.first th{
+    padding: 8px;
+    background-color: rgb(136, 110, 252);
+    color: rgb(243, 241, 239);
+    letter-spacing: 3px;
+}
+
+/* th태그 중 2번쨰 자식 요소를 선택 */
+table.first th:nth-child(2){
+    letter-spacing: 45px;
+    text-align: center;
+}
+
+table.first td{
+    padding: 10px;
+    text-align: center;
+}
+
+/* tag 태그 중 첫번쩨 자식 요소를 선택 */
+table.first td:first-child{width: 10%;}
+
+/* tag 태그 중 두번째 자식 요소를 선택 */
+table.first td:nth-child(2){width: 70%;}
+
+/* tag 태그 중 세번째 자식 요소를 선택 */
+table.first td:last-child{width: 20%;}
+
+/* 자식요소 중 홀수인 요소만 선택 */
+/* TODO: 여기에 작성해보세요 */
+table.first tr:nth-child(odd){
+    background-color: rgb(201, 174, 250);
+}
+
+/* 자식요소 중 짝수인 요소만 선택 */
+/* TODO: 여기에 작성해보세요 */
+table.first tr:nth-child(even){
+    background-color: rgb(238, 242, 245);
+}
+/* TODO: 여기에 작성해보세요 */
+table.first th,
+table.first td
+{
+    border-left: 1px solid rgb(175, 223, 241);
+}
+
+/* :hover
+    마우스가 요소에 올라가있는 상태 */
+/* TODO: 여기에 작성해보세요 */
+
+table.first tr:hover
+{
+    border-left: 1px solid rgb(102, 182, 102);
+    color: #da6161;
+    cursor: pointer;
+}
+
+
+/* :empty
+    내용이 없는 상태    
+*/
+p:empty{
+    margin: 100px;
+}
+
+/* TODO: 여기에 작성해보세요 */
+table.second{
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table.second th{
+    padding: 8px;
+    background-color: rgb(135, 222, 200);
+    color: rgb(6, 73, 117);
+    letter-spacing: 3px;
+}
+
+table.second td{
+    padding: 10px;
+    text-align: center;
+}
+/* TODO: 여기에 작성해보세요 */
+
+/* td 첫번쨰 요소 선택 */
+table.second td:first-of-type {width: 20%;}
+
+/* td 두번쨰 요소 선택 */
+table.second td:nth-of-type(2) {width: 60%;}
+
+/* td 세번쨰 요소 선택 */
+table.second td:last-of-type {width: 20%;}
+
+/* part1 : nth-of-type */
+/* TODO: 여기에 작성해보세요 */
+/* nth - of -type 류는 지정한 요소들 끼리만 순서를 카운팅한다. */
+section.part1 div:first-of-type{
+    background-color: bisque;
+ }
+section.part1 div:last-of-type{
+    background-color: cadetblue;
+}
+section.part1 div:nth-of-type(2){
+    background-color: blueviolet;
+}
+section.part1 div:nth-last-of-type(2){
+    background-color: darkgray;
+}
+
+/* part2 : nth-child */
+/* TODO: 여기에 작성해보세요 */
+/* nth - if -child류는 자식 요소 전체를 기준으로 순서를 카운팅한다. */
+section.part2 div:first-child{
+    background-color: darkkhaki;
+
+}
+section.part2 div:last-child{
+    background-color: greenyellow;
+}
+
+section.part2 div:nth-child(2){
+    background-color: cornflowerblue;
+}
+section.part2 div:nth-last-child(2){
+    background-color: #da6161;
+}
+

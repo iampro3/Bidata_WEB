@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+/* TODO: 여기에 작성해보세요 */
+form label{
+    display: inline-block;
+    width: 100px;
+}
+
+input[type^='t'],
+textarea{
+    border: 1px solid #0c198a;
+    padding: 8px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+textarea{
+    resize: none;
+}
+
+label[for^='co']{
+    position: relative;
+    top:-90px;  /* 양수 : 위로 올라감 */
+}
+
+input[type^='b']{
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background-color: blueviolet;
+    color: #7877da;
+    width: 300px;
+}
+
+input[type^='b']{
+    padding: 10px 20px; 
+    border: 1px solid #ddd;
+    background-color: #7877da;
+    color: rgb(230, 236, 234);
+    border-radius: 5px;
+}
+
+/* actiove = 마우스를 누르고 있는 상태 */
+input[type^='b']:active{
+    border: 1px solid #0c198a ;
+    background-color: rgb(8, 102, 102);
+}
+
