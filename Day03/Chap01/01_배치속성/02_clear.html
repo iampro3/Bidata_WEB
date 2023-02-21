@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clear</title>
+    <link rel="stylesheet" href="css/02_clear.css">
+</head>
+<body>
+    <div class="container">
+        <!-- div.contaonrt>(h1+div.innrt>(div.item)*3) -->
+        <h1>Clear:none;(default)</h1>
+        <div class="inner">
+            <div class="item left"></div>
+            <div class="item right"></div>
+            <div class="item next"></div>
+        </div>         
+    </div>
+
+    <div class="container">
+        <!-- div.contaonrt>(h1+div.innrt>(div.item)*3) -->
+        <h1>Clear:left;</h1>
+        <div class="inner">
+            <div class="item left"></div>            
+            <div class="item next clear-left"></div>
+        </div>         
+    </div>
+
+    <div class="container">
+        <!-- div.contaonrt>(h1+div.innrt>(div.item)*3) -->
+        <h1>Clear:right;(default)</h1>
+        <div class="inner">
+            <div class="item right"></div>
+            
+            <div class="item next clear-right"></div>
+        </div>         
+    </div>
+
+    <div class="container">
+        <!-- div.contaonrt>(h1+div.innrt>(div.item)*3) -->
+        <h1>Clear:both;</h1>
+        <div class="inner">
+            <div class="item left"></div>
+            <div class="item right"></div>
+            <div class="item next clear-both"></div>
+        </div>         
+    </div>
+</body>
+</html>
