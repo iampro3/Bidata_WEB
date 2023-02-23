@@ -1,0 +1,36 @@
+*{margin: 0;padding: 0;}
+
+.container{
+    width: 1200px;
+    height: 900px;
+    margin: 0 auto;
+    border:  3px dashed orange;
+}
+
+ul{list-style-type: none;}
+a{text-decoration: none; color: blueviolet;}
+
+header nav {float: left; height: 50px;text-align: center;}
+header nav .mainmenu {width: 600px;line-height: 60px;}
+
+/* 메인메뉴 */
+header nav .mainmenu > li {
+    float: left;
+    width: calc(100%/4);
+    height: 100%;
+    color: blue;
+    cursor: pointer;
+}
+
+header nav .mainmenu > li:hover{background-color: rgb(236, 42, 213);}
+header nav .mainmenu > li:hover > a {color: blue;}
+
+/* 메인 메뉴에 마우스 hover 서브 메뉴 출력 */
+header nav .mainmenu > li:hover .submenu { display: block;}
+
+/* 서브메뉴 */
+header nav .submenu{display: none;}
+header nav .submenu li {background-color: aliceblue;}
+header nav .submenu li a{color: black;}
+header nav .submenu li:hover {background-color: rgb(239, 155, 229);}
+header nav .submenu li:hover a {color: hotpink;}

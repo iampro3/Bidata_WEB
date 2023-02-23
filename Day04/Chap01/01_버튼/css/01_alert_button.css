@@ -1,0 +1,23 @@
+.btn{
+    border: none;
+    padding: 14px 28px;
+    cursor: pointer;    /* 버튼에 올리면 커서가 손 모양변경 */
+    color: aliceblue;   /* 버튼글씨색상 */
+}
+
+.success{background-color: rgb(205, 165, 240);}
+.success:hover{background-color: rgb(118, 25, 176);}
+
+.info{background-color: rgb(122, 232, 131);}
+.info:hover{background-color: rgb(9, 158, 89);}
+
+.warning{background-color: rgb(243, 119, 181);}
+.warning:hover{background-color: rgb(169, 15, 97);}
+
+.danger{background-color: orange;}
+.danger:hover{background-color: orangered;}
+
+.default{background-color: rgb(129, 234, 234);
+         color: black;      /* 폰트색상 */
+}
+.default:hover{background-color: rgb(116, 166, 224);}

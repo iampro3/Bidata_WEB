@@ -1,0 +1,21 @@
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: blueviolet
+}
+
+.btn{
+    background-color: lightblue;
+    padding: 8px 16px; 
+    font-size: 18px;    
+}
+
+.btn:hover{
+    background-color: rgb(190, 220, 163);
+    color: azure;    
+}
+
+.btn.round{
+    border-radius: 50%;
+    
+}

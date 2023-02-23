@@ -19,18 +19,20 @@
     background: linear-gradient(to right, yellow, orange, red);
 }
 
+/* 대각선 사이즈 */
 .instar {
     width: 600px;
     height: 600px;
     margin: 50px auto;
 }
 
+/* 대각선 색상 설정/00% 몇 % 위치부터 시작되는가 */
 .top-left {
     background: linear-gradient(to top left, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
 }
 
 .top-right {
-    background: linear-gradient(to top right, #8a3ab9 0%, #cd486b 45%, #fbad50 80%, #fccc63 95%);
+    background: linear-gradient(to top right, #8a3ab9 0%, #cd486b 45%, #fbad50 50%, #fccc63 95%);
 }
 
 .bottom-left {

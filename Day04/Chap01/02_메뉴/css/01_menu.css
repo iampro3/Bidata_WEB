@@ -1,0 +1,56 @@
+* {margin: 0; padding: 0;box-sizing: border-box;}
+
+header {
+    width: 100%;
+    background-color: rgb(95, 15, 126);
+    position: fixed;
+    top: 0;
+    overflow: hidden;
+}
+
+.navbar {}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: rgb(248, 246, 243);
+    text-decoration: none;
+    padding: 12px 16px;
+    font-size: 18px;
+}
+
+.navbar a:hover {
+    background-color: rgb(197, 9, 190);    
+}
+
+.navbar a.active {
+    background-color: rgb(45, 127, 64);
+}
+
+.navbar .icon {
+    float: right;   /* 모바일일 때 아이콘 생성 */
+    display: none;  /* pc일 때 아이콘 없음 */
+}
+/* 반응형 적응하기 */
+/* 최대 크기가 600px일 때,->600px 이하에 스타일 적용 */
+@media screen and (max-width: 600px) {   /* and 뒤에 띄어쓰기 필수 */
+    .navbar a:not(:first-child, .icon){
+        display: none;
+        }   
+        
+    .navbar .icon {
+        display: block;
+        } 
+
+    .navbar.mobile a:not(:first-child) {
+        float: none;
+        display: block;        
+        clear: both;
+        }
+        
+    .navbar.mobile .icon {
+        position: absolute;
+        top: 0;
+        right: 0;
+       }
+}

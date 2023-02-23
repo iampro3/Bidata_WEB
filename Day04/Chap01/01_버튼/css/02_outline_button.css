@@ -1,0 +1,59 @@
+.btn{
+    border: 2px solid rgb(202, 199, 199);
+    background-color: wheat;
+    color: black;
+    padding: 15px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.success{
+    background-color: rgb(204, 163, 243);
+    color: aliceblue;
+
+}
+
+.success:hover{
+    background-color: blue;
+    color: aliceblue;
+}
+
+.info{
+    border-color: rgb(189, 189, 248);
+    color: antiquewhite;
+}
+
+.info:hover{
+    background-color: crimson;
+    color: wheat;
+}
+
+.warning{
+    background-color: beige;
+    color: blueviolet;
+}
+
+.warning:hover{
+    background-color: orange;
+    color:white;
+}
+
+.danger{
+    background-color: darkkhaki;
+    color: crimson;
+}
+
+.danger:hover{
+    background-color: crimson;
+    color: aliceblue;
+}
+
+.default{
+    background-color: rgb(249, 248, 241);
+    color: black;
+}
+
+.default:hover{
+    background-color: aliceblue;
+    color: rgb(240, 251, 251);
+}

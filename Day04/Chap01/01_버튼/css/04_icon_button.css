@@ -1,0 +1,13 @@
+.btn{
+    background-color: blueviolet;
+    border: none;
+    color: aliceblue;
+    padding: 12px 16px;
+    font-size: 18px;    /* 폰트 사이즈를 크게 하면 아이콘 크기가 조절된다. 라이브러리가 폰트로 되어 있음 */
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: darkseagreen;
+    
+}

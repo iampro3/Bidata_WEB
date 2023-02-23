@@ -112,7 +112,7 @@
 }
 
 /* align-content */
-.align { height: 1000px; }
+.align { height: 1000px; }      /* 가로로 1,2,3 .. 정렬 */
 .align-start { align-content: start; }
 .align-end { align-content: end; }
 .align-center { align-content: center; }
@@ -122,7 +122,7 @@
 .align-stretch { align-content: stretch; }
 
 /* justify-content */
-.justify { grid-auto-flow: column; }
+.justify { grid-auto-flow: column; }    /* 세로로 1,2,3,... 정렬 */
 .justify-start { justify-content: start; }
 .justify-end { justify-content: end; }
 .justify-center { justify-content: center; }
