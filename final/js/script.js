@@ -82,7 +82,7 @@ $(function(){       // 조작하고 기능을 만드는 파일js
     }) // 슬라이드 네비게이션
 
     /* 메뉴닫기 */
-    $('#btn-close').on('click', function(){
+    $('#btn-close').on('click', function() {
         $('header').animate({
             'left' : '-25rem'            
         }, 400)
@@ -93,7 +93,7 @@ $(function(){       // 조작하고 기능을 만드는 파일js
     })
 
     /* 메뉴열기 */
-    $('#btn-menu').on('click', function(){
+    $('#btn-menu').on('click', function() {
         $('header').animate({
             'left' : 0            
         }, 400)

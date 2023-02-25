@@ -4,7 +4,7 @@
 }
 
 * {
-    max-width: 0; padding: 0;
+    margin: 0; padding: 0;      /* 좌측 메뉴 보라색 박스 영역을 화면과여백없이 지정 */
     box-sizing: border-box;
     outline: 0 ; border : none ;
     text-decoration: none;
@@ -24,7 +24,7 @@ section{
     min-height: 100vh;  /*  모니터 크기의 전체가 적용된다. 50:절반 */
     padding: 1rem 5%;
 }
-
+    /* 좌측 메뉴 my portpolio 영역 부분 */
 header {
     position: fixed;
     top: 0; left: 0; bottom: 0;
@@ -34,11 +34,12 @@ header {
     flex-direction: column; /* 가로 방향으로 변경함 */
     justify-content: space-between;
     align-items: center;
-    padding: 6rem 1rem;
+    padding: 10rem 1rem;
     text-align: center;
 }
+/* my portpolop 글씨 */
 header .logo {
-    color: aliceblue;
+    color: rgb(224, 215, 249);
     font-size: 2rem;
     font-weight: bold;
 }
@@ -48,7 +49,7 @@ header .logo  span {
 header .navbar {}
 header .navbar a {
     display: block;
-    color: aliceblue;
+    color: rgb(218, 209, 254);
     margin: 2rem 0;
     font-size: 1.5rem;
 }
@@ -57,9 +58,9 @@ header .navbar a:hover {
 }
 header .sns {}
 header .sns a {
-    color: aliceblue;
-    font-size: 2rem;
-    margin: 0 1rem;
+    color: rgb(231, 241, 250);
+    font-size: 1rem;
+    margin: 50px 1rem;
 }
 
 header .sns a:hover {
@@ -98,8 +99,8 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 350px;
-    height: 600px;
+    width: 380px;
+    height: 680px;
     padding: 30px;    
     border-radius: 10px;
     background-color: aliceblue;
@@ -108,16 +109,13 @@ a {
 }
 
 /* inner */
-#login {
-    width: 100%;
-    height: 100%;
-}
+#login { width: 100%;   height: 100%; }
 
-/* logo 단 크기 및 위아래 */
+/* 휴먼교육센터 logo 단 크기 및 위아래 */
 #login .login-logo {
-    height: 200px;
-    margin-top: 40px;
-    margin-bottom: 30px;
+    height: 150px;
+    margin-top: 10px;
+    margin-bottom: 90px;
 }
 
 /* 로고 크기 */
@@ -138,7 +136,7 @@ a {
     width: 100%;
     height: 32px;
     padding-left: 5px;
-    font-size: rem;
+    font-size: 1rem;
     border-bottom : 1px solid #ddd;
     margin-bottom: 10px;    
     box-sizing: border-box;
@@ -163,7 +161,7 @@ a {
 /* focus
     -input 태그에 마우스 커서가 놓인 상태를 선택
 */
-#login .login-inputbox input:focus ~ .border{    /* 로그인에 주황라인 생성 트랜지션 */
+#login .login-inputbox input:focus ~ .border {    /* 로그인에 주황라인 생성 트랜지션 */
     width: 100%;
     border-width: 1px;
     transition: width 0.5s;
@@ -171,14 +169,14 @@ a {
 }
 
 /* 아이디 저징/자동 로그인 */
-#login .login-remember{
+#login .login-remember {
     height: 30px;
     margin-bottom: 40px;
     text-align: center;
     margin-top: 10px;    
 }
 
-#login .login-remember label{
+#login .login-remember label {
     position: relative;
     padding-left: 25px;
     color: rgb(174, 164, 176);
@@ -190,7 +188,7 @@ a {
     position: absolute;
     width: 0;
     height: 0;
-    opacity: 0%;
+    opacity: 0;
     cursor: pointer;
 }
 
@@ -236,7 +234,7 @@ a {
     color: blanchedalmond;
     font-size: 1.2rem;
     color: rgb(249, 246, 244);
-    margin-top: 10px;
+    margin-top: 10px;   /* 내가 추가함 */
     line-height: 50px;    
     border-radius: 10px;
 }
@@ -250,8 +248,7 @@ a {
 #login .copy {
     height: 15px;
     margin-top: 30px;   /* 카피라이트 글자 위의 요소와의 거리 */
-    margin-bottom: 10px;
-    color: rgb(92, 90, 90);
+    margin-bottom: 10px;   
 }
 
 #login .copy p {
@@ -267,7 +264,7 @@ a {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 1rem;
+    gap: 5rem;
 }
 .profile .img {
     flex: 1 1 20rem;
@@ -277,12 +274,16 @@ a {
     width: 100%;
     min-width: 320px;
 }
-.profile .content {flex: 1 1 30rem;}
+.profile .content {
+    flex: 1 1 30rem;}
+
 .profile .content .intro {
     font-size: 2rem;
+    color: var(--main-color);
 }
-.profile .content h3 {font-size: 3rem;
-color: blueviolet;}
+.profile .content h3 {
+    font-size: 3rem;
+    color: blueviolet;}
 
 .profile .content h3 span {
     color: var(--main-color);
@@ -292,19 +293,19 @@ color: blueviolet;}
     color: black;
 }
 .profile .content .text {
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     color: darkgrey;
 }
 
 .btn {
     display: inline-block;
-    margin: 1rem;
+    margin: 1rem 0;
     padding: 0.8rem 1.2 rem;
     background-color: var(--main-color);
     color: #ddd;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 40px;
+    border-radius: 10px;
 }
 .btn:hover {
     background-color: darkblue;
@@ -316,14 +317,14 @@ color: blueviolet;}
 /* 슬라이드 */
 .slide-container {
     width: 100%;
-    height: 480px;
+    height: 700px;
     margin: 0 auto;
 }
 
 .slide-container .slide {
     width: auto;
-    height: 480px;
-    padding: 20px 0;
+    height: 700px;
+    padding: 20px 0;    /* 작은 이미지와 큰 이미지와 간격 */
     box-sizing: border-box;
 }
 
@@ -332,14 +333,14 @@ color: blueviolet;}
     height: 100%;
 }
 
-.slide-nav {
+.slide-nav {    /* 하단 작은 슬라이드 영역 */
     width: 100%;
     height: 180px;
     margin: 0 auto;
 }
 
 
-.slide-nav .slide {
+.slide-nav .slide { /* 하단 슬라이드 이미지 크기 */
     width: auto;
     height: 180px;
     /* padding: 20px; */
@@ -347,12 +348,12 @@ color: blueviolet;}
 }
 
 .slide-nav .slide:not(.slick-current) {
-    filter: brightness(20%);
+    filter: brightness(40%);
 }
 
 /* ################ section.portpolio 끝 ############## */
 
-/* 메뉴열기/닫기 */
+/* 상단 x 표 메뉴열기/닫기 */
 .btn-menu {
     position: fixed;
     top: 10px;
@@ -362,8 +363,8 @@ color: blueviolet;}
     height: 50px;
     line-height: 50px;
     text-align: center;
-    font-size: 20px;
-    background-color: blue;
+    font-size: 30px;
+    background-color: rgb(158, 158, 249);
     color: aliceblue;
     border-radius: 50%;
     cursor: pointer;
