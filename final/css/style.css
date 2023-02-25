@@ -20,7 +20,7 @@ body {
     padding-left: 25rem;        /*  헤더의 크기만큼 띄어서 나온다. */
 }
 
-section{
+section {
     min-height: 100vh;  /*  모니터 크기의 전체가 적용된다. 50:절반 */
     padding: 1rem 5%;
 }

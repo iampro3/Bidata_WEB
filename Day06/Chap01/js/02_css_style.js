@@ -27,7 +27,7 @@ $(function(){
         'height'    :'400px',
     })
 
-    //따옴포를 안 붙이면 카멜케이스
+    // 따옴포를 안 붙이면 카멜케이스
     $('#item5 .text').css({
 
         color        :'violet',
@@ -36,5 +36,4 @@ $(function(){
         width        :'400px',
         height       :'400px',
     })
-
 })

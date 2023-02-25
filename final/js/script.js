@@ -65,12 +65,11 @@ $(function(){       // 조작하고 기능을 만드는 파일js
     })
 
     //메인슬라이드와 연결
-    $('.slide-nav').slick({
+    $('.slide-nav').slick ({
         dots: false,
         arrows: false,
         slidesToShow: 5,
         slidesToScroll: 1,
-
 
         pauseOnDotsHover: true,         // 페이지네이션 호버 시 자동재생 멈춤
         pauseOnFocus: true,             // 포커스 시, 자동재생 멈춤
@@ -89,7 +88,7 @@ $(function(){       // 조작하고 기능을 만드는 파일js
         
         $('body').animate({
             'padding-left' :0
-        },400)
+        }, 400)
     })
 
     /* 메뉴열기 */

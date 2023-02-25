@@ -29,7 +29,7 @@
     'use strict';
     var Slick = window.Slick || {};
 
-    Slick = (function() {
+    Slick = (function(){
 
         var instanceUid = 0;
 
@@ -37,7 +37,7 @@
 
             var _ = this, dataSettings;
 
-            _.defaults = {
+            _.defaults ={
                 accessibility: true,
                 adaptiveHeight: false,
                 appendArrows: $(element),

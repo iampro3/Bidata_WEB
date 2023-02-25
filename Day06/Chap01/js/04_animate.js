@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
     /*
         fadeXXX( 인자1 )
         * 인자1 : duration  (시간 : ms), ('slow', 'fast')

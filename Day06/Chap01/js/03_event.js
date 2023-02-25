@@ -6,7 +6,6 @@ $(function(){
 
     $('#item1').on('click', function() {
         $('#item1').css('color', 'hotpink')
-
     })
 
     //this : 현재 속한 블록의 객체, 현재 선택 한 요소를 가리키는 키워드
