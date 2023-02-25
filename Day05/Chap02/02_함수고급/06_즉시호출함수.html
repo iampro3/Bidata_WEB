@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>즉시호출함수</title>
+    <script>
+        let pi = 3.14
+        console.log(`원주율은 ${pi} 입니다`)
+    </script>
+    <!-- 내부 스크립트 -->
+    <script>
+        //즉시호출함수 - 쉐도잉: 변수의 충돌을 막아주기 위해서 사용한다.
+        // let pi가 중복 선언 중
+        (function() {
+            let pi =3.141592
+            console.log(`파이 값은 ${pi}입니다`)
+        }) ()
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

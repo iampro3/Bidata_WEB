@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소 제거 및 복제</title>
+</head>
+<script>
+    document.addEventListener('DOMContentLoaded', (event)=>{
+        const ul =document.getElementById('list')
+        const li =document.getElementById('remove')
+
+        //자식 노드 리스트에서 특정 자식 노드 제거
+        ul.removeChild(li)
+
+        const Chicken = document.getElementById('Chicken')
+        //속성 노드 제거하기 : 보라색 지정이 제거된다.
+        Chicken.removeAttribute('style')
+
+        //노드 복제하여 새로운 노드로 추가 : 2번 li를 복제해서 마지막에 추가한다.
+        //복제할 노드.cloneNode(자식노즈 복제여부)
+        ul.appendChild(li.cloneNode(true))
+    })
+</script>
+<body>
+    <ul id="list">
+        <li>1.학원가기</li>
+        <li id="remove">2.집 가기</li>
+        <li id="Chicken" style="color:violet">3.치킨먹기</li>
+    </ul>
+
+</body>
+</html>

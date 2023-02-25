@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 시작하기</title>
+    
+    <!-- jQuery 라이브러리 파일로 포함시키는 방법 / 사이트에서 다운받아와야 한다. -->
+    <!-- 외부에 잇는 스크립트를 가져올 수 있다. -->
+    <script src="js/jquery-3.6.3.min.js"></script>
+    
+    <!-- Contnetn Delivery Network 
+         : 컨텐츠를 빠르게 다운 받을 수 있도록 해 주는 분산된 서버
+         : 인터넷이 안 되면 사용할 수 없다.
+        -->
+         <!-- jQuery 사이트의 주소를 복사해서 입력한다. -->
+    <!-- jQuery CDN 방식으로 포함하기 -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+    <script>
+        /* Javascript = 문서 준비이벤트 
+        document.addEventListener('DOMContentLoaded', (function)=>{
+        })
+            */
+           /* 
+            jQuery - 문서 준비 이벤트
+            $(document).ready(function(){
+                
+        })
+        */
+       
+            //축약형
+            $(function(){
+                alert('Hello jQuery~1')
+                $('h1').text('Hello jQuery~!')
+            })
+        
+    </script>    
+
+</head>
+<body>
+    <h1></h1>
+</body>
+</html>

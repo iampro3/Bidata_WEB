@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>요소선택</title>
+    <script>
+        /* 
+            *요소를 선택하는 방법   
+            -태그 이름으로 요소 선택    ::getElenentsByTagName()
+            -id로 요소선택              :getElenentById()
+            -class로 요소선택           :getElenentsByClassName()
+            -name로 요소선택            :getElenentsByName()
+            -선택자로 요소 선택         :querySelector()
+            -선택자로 여러 요소 선택    :querySelectorAll()
+        */
+
+        document.addEventListener('DOMContentLoaded', () => {
+            //태그 이름으로 요소 선택
+            //li 태그 선택
+            const cafeList = document.getElementsByTagName('li')
+            for(let i=0; i< cafeList.length; i++){
+                //index(인덱스) : 인덱스로 목록의 요소를 접근
+                cafeList.item(i).style.color = 'blue'
+            }
+            //id요소로 선택 :getElementById
+            const box = document.getElementById('box')
+            box.style.width = '200px'
+            box.style.height = '200px'
+            box.style.backgroundColor = 'Orange'
+
+            //class로 요소 선택
+            const items =document.getElementsByClassName('item')
+            items[0].style.width = '200px'
+            items[0].style.height = '100px'
+            items[0].style.backgroundColor= 'royalblue'
+            
+            items[1].style.width = '200px'
+            items[1].style.height = '100px'
+            items[1].style.backgroundColor= 'violet'
+            
+            items.item(2).style.width = '200px'
+            items.item(2).style.height = '100px'
+            items.item(2).style.backgroundColor= 'pink'
+            
+            items.item(3).style.width = '200px'
+            items.item(3).style.height = '100px'
+            items.item(3).style.backgroundColor= 'green'
+
+            //name 로 요소 선택     : 
+            const inputs = document.getElementsByName("input")
+            const input = inputs[0]
+
+            //입력 태그에 키 입력 시, h1태그에 텍스트 를 출력
+            input.addEventListener('keyup',(event) =>{
+                const textContent = document.getElementById('text')
+                //input.value : input 태그이 value속성의 값->입력한 텍스트
+                text.innerText = input.value
+                //innerText : 해당 요소에'텍스트'만 지정하는 속성
+                //innerHTML : 해당 요소에 '텍스트'+'HTML'양식 지정하는 속성
+            })
+
+            //선택자로 요소 선택    :querySelector()
+            const ul = document.querySelector('.product-list ul')
+            ul.style.listStyleType ='none'
+
+            //선택자로 여러 요소 선택   :querySelectorAll
+            const lists =document.querySelectorAll('.product-list ul li')
+
+            lists.forEach((list) =>{
+                //요소.children     :해당 요소의 자식 요소 들을 가진 속성
+                //list.children[0]  :li 태그 자식 요소 중 0번째 요소 -> 여기서는 img
+                list.children[0].src = './img/product.jpg'
+             /*    list.children[0].src = './img/product.jpg' */
+                list.children[0].style.width = '300px'
+            })
+
+        })
+    </script>
+</head>
+<body>
+    <ul class="cafe-list">
+        <li>차이티라떼</li>
+        <li>비엔타</li>
+        <li>코코아</li>
+        <li>로열밀크티</li>
+        <li>카페모카</li>
+    </ul>
+
+    <hr>
+
+    <div id = "box"></div>
+    <hr>
+
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
+
+    <!-- h1의 id로 입력해야 한다. -->
+    <h1 id="text">입력해보세요</h1>
+    <input type="text" name="input" placeholder="입력해보세요" value="">
+
+    <hr>
+
+    <div class="product-list">
+        <ul>
+            <li><img src="product2.jpg" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+            <li><img src="" alt=""></li>
+        </ul>
+    </div>
+</body>
+</html>
