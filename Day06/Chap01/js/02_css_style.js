@@ -4,6 +4,7 @@ $(function(){
     //$('선택자).css('스타일속성', '속성')
 
     $('#item1').css('color', 'orange')
+    $('#item2').css('color', 'cyan')
     $('#item2').css('transform', 'rotate(45deg')
     $('#item3').css('opacity', '0.5')
 
@@ -22,7 +23,7 @@ $(function(){
 
         'color'     :'violet',
         'font-size' :'50px',
-        'border'    :'5px solid violet',
+        'border'    :'5px solid green',
         'width'     :'400px',
         'height'    :'400px',
     })
@@ -30,7 +31,7 @@ $(function(){
     // 따옴포를 안 붙이면 카멜케이스
     $('#item5 .text').css({
 
-        color        :'violet',
+        color        :'green',
         fontsize     :'50px',
         border       :'5px solid violet',
         width        :'400px',

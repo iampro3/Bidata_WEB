@@ -3,20 +3,22 @@
 .main-title{
     padding: 30px;
     text-align: center;
-    background-color: blanchedalmond;
-    color: aliceblue;
+    background-color: rgb(239, 224, 252);
+    color: rgb(57, 7, 94);
     font-size: 30px;
 }
 
 header{
     position: sticky;
     top: 0;
-    background-color: black;
+    background-color: rgb(83, 14, 110);
     padding: 0 32px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: azure;
+    height: 100px;
+    color: rgb(183, 34, 178);
+    font-size: 18px;
 }
 
 header ul {
@@ -29,9 +31,10 @@ header ul li {
     font-weight: bold;
 }
 
-section{
-    width: 1024px;
+section {
+    position: relative;
+    width: 1024px;  /* 해제하면 하단 dashed 박스의 크기가 ul 박스 너비와 동일해진다.*/    
     height: 400px;
     margin: 0 auto;
-    border: 2px dashed orange;
+    border: 2px dashed rgb(119, 17, 196);
 }
