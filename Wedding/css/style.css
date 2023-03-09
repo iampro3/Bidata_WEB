@@ -15,6 +15,7 @@ header {
     height: 60px;
     background-color: #123123;
     z-index: 10;
+    
 }
 
 header .logo {
@@ -57,17 +58,24 @@ header .util {
 section.main {
     width: 100%;
     display: flex;  
+    
 }
 
 section.main .inner { 
     position: relative;
     width: 100%;
+    top: 20px;
     padding: 20px;
     border: 2px solid var(--main);
 }
 section.main .img-box {
-    display: flex;
+    display: flex; 
     justify-content: center;
+    text-align: center;
+    position: relative;
+    top: 40%;
+    left: 30%;
+    transform: translate(-50%, -50%);
   
 }
 section.main .img-box .date {
@@ -76,9 +84,17 @@ section.main .img-box .date {
     */
     /* ------------> TODO: 여기에 작성 <-------------  */
     
+        text-align: center;
+        position: relative;
+        top: 5%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+
+    
     color: white;
-    font-size: 40px;
-    height: 15%;
+    font-size: 30px;
+    height: 0%;
+    top: 30px;
     
 }
 
@@ -87,15 +103,23 @@ section.main .img-box .ment {
         힌트: 멘트를 (사진)부모요소를 기준으로 위로 부터 15% 위치에 배치하시오.
     */
     /* ------------> TODO: 여기에 작성 <-------------  */
-
+    text-align: center;
+    position: relative;
+    top: 15%;    
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
-    font-size: 24px;
+    font-size: 20px;
     height: 15%;
+    top: 70px;
 }
 
 section.main .img-box img {
     max-width: 360px;
     max-height: 70vh;
+    align-items: center;
+    
+     
 }
 
 section.main .content-box {
@@ -125,13 +149,16 @@ section.profile .grid-container {
     */
     /* ------------> TODO: 여기에 작성 <-------------  */
     display: grid;
+    margin-top: 20px;
     margin-bottom: 20px;
     grid-template-columns: auto auto ;      
-    text-align: center;     
+    text-align: center;    
+    top: 10px; 
 }
 
 section.profile .grid-container .item {
     margin-bottom: 20px;    
+    
 }
 section.profile .grid-container .item .title {
     /* 
@@ -151,6 +178,7 @@ section.profile .grid-container .item .title span {
 
 section.profile .grid-container .item .title h5 {
     font-size: 20px;
+    
 }
 
 section.profile .grid-container .item .icon-box {
@@ -158,7 +186,7 @@ section.profile .grid-container .item .icon-box {
         힌트: flex 레이아웃을 이용하여 정가운데(수평/수직)로 배치하시오.
     */
     /* ------------> TODO: 여기에 작성 <-------------  */
-
+top: 10px;
     column-gap: 30px;    
 }
 
