@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 공부 :0418</title>
+    <script>
+        function sum(x,y){
+            let result = x+y;
+            // console.log("result : ", result)     
+            return result;       
+        }
+
+        
+        function min(z,a)
+        {
+            let result2 = z-a;
+             console.log("result2 : ", result2)
+        }
+        let s = sum(3,5);
+        console.log("s : ", s)
+
+        min(3,sum(3,5));
+
+        let fn1 = sum;
+        let s2= fn1(1,2)
+        console.log("s2 :", s2)
+
+        let mn1 = min;
+        let s3 = mn1(5,3)
+        console.log("s3 :", s3)
+
+        // 익명함수
+        let fn2 = function(x,y){
+            return x* y;
+        }
+        
+/*      function fn2(x,y){
+            return x* y;    // 상동 임 :
+        } */
+
+        // 전달인자 1개만 받음
+        function param(a){
+            if(a != undefined){
+                console.log("a : ", a)
+            }else{
+                console.log("사용법 : param(123)")
+            }
+            
+        }
+        param("글씨")   //  전달인자 1개
+        param() // 전달인자 없음
+
+        function param1(a,b,c){ // 전달인자 3개
+            console.log("a, b, c : ", a, b,c)
+        }
+        param1(1,2,3) // 전달인자 3개 받음
+        // 실행할떄의 전달인자와 관계없이
+        // 함수는 자기가 필요한 것만 받아 쓸 수 있다.
+        // 전달인자는 추가할 수 있다.
+
+        // 콜백함수 ; 전달인자로 함수를 전달하는 경우
+        // 호출한 곳에서 적절할 때 사용하라고 전달해준다.
+        function param_fn(cb,a,b){
+            console.log(typeof cb)  // function
+            console.log(cb)
+            if(typeof cb == "function"){
+                cb(a,b)
+            }            
+        }
+        console.log("------------")
+        param_fn(param)
+
+        // 익명함수를 변수로 초기화해서 전달인자로 사용함
+        let fn3 = function(){
+            console.log("익명함수 실행")
+        }
+        //param_fn(fn3)
+
+        param_fn(function(){
+            console.log("익명함수 실행 2")
+        })
+
+        setTimeout(function(){
+            console.log("익명함수 실행2")
+        }, 1000* 3)
+
+        let itv = setInterval(function(){
+            console.log("익명함수 실행2")
+        }, 1000 * 3)
+        clearInterval(itv)
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

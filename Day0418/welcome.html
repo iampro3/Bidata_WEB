@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let, var const</title>
+    <script>
+        console.log(a)
+        /* let a =10
+        let a = 20      var 대신 사용할 것.*/ 
+        const b =20 // 아래에서 변수 변경하는 것을 방지한다.
+        // b = 30
+        var a = 10
+        var a = 20
+    </script>
+    <style>
+        [id ^="title_"]{
+        color : red
+        }
+    </style>
+</head>
+<!-- <body>
+    <div id="title_1"></div>
+    <div id="title_2"></div>
+    <div id="title_3"></div>
+    <div id="title_4"></div>
+    <div id="">other</div> -->
+
+    <div>1</div>
+    <div id="second">2</div>
+    <div id="a b">3</div>
+    <div id="a c">4</div>
+    <div>5</div>
+
+    <div id = "msg1">메시지 1</div>
+    <div id = "msg2">여기는 메시지 나오는 곳</div>
+    <script>
+        console.log("Hello world")
+        
+        // css 선택자로 첫번째  dom 하나만
+        let dom = document.querySelector("div")
+        console.log(dom)
+
+        // 모두를 배열로 return
+        let dom_all = document.querySelectorAll("div")
+        console.log(dom_all)
+
+        let second = document.querySelector("#second")
+        console.log(second)
+
+        let c = document.querySelector("div.a .c") // 한 칸 띄면 자식
+        console.log(c)
+
+        let e =document.querySelector("div.e")
+        console.log("e.innerHTML :", e.innerHTML);
+        console.log("e.text :", e.text);
+
+
+        // 로그인 영역에서 form은 id에 특수문자가 사용되는 것을 알아낼 수 없는데
+        // javascripts에서 알아내야 함
+        let msg = document.querySelector("#msg")
+        msg.innerHTML = "다른 글<strong>씨</strong>"
+        
+        let msg2 = document.querySelector("#msg2")
+        msg2.innerText = "다른 <strong>글씨</strong>"
+    </script>
+</body>
+</html>
