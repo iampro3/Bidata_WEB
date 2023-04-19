@@ -1,0 +1,10 @@
+
+
+/* 전체영역 */
+.container {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+/* ( margin-rigth : auto; margin-left : auto; ) */

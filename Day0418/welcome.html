@@ -35,6 +35,14 @@
 
     <div id = "msg1">메시지 1</div>
     <div id = "msg2">여기는 메시지 나오는 곳</div>
+
+    <hr>
+    //[src ^= " https"]
+    <img src="https://5b0988e595225.cdn.sohucs.com/images/20180105/2a408ea8708242bf8b34f63c4c49544a.jpeg">
+    <p id ="info">
+
+
+    </p>
     <script>
         console.log("Hello world")
         
@@ -64,6 +72,21 @@
         
         let msg2 = document.querySelector("#msg2")
         msg2.innerText = "다른 <strong>글씨</strong>"
+
+        let src = "https://5b0988e595225.cdn.sohucs.com/images/20180105/2a408ea8708242bf8b34f63c4c49544a.jpeg"        
+        let img = document.querySelector("img")
+        // 기존의 src를 읽는 법
+        let src_origin = img.getAttribute("src")
+        console.log(src_origin)
+        document.querySelector("p#info").innerHTML = src_origin
+
+
+        // 속성 중에 src 속성의 값을 바꾸는 방법
+        img.setAttribute("src", src)
+        img.setAttribute("stlye", "border:3px solid blue;")
+        
+        // ------------------ 이벤트 ---------------------------------
+        
     </script>
 </body>
 </html>
