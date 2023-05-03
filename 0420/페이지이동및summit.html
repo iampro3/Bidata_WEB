@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 페이지를 이동방법 </h1>
+    <a href="http://naver.com">네이버</a><br>
+    <a href="http://daum.net" target="_blank">다음</a>
+    <a href="#here">바로가기</a>
+    <br>
+    <div id="here">
+        [바로가기]스크롤이 여기로 온다.
+    </div>
+    <br>
+    <form action="http://naver.com" method="get">
+        글씨<br>
+        아이디 : <input type="text" name="id"><br>  <!-- 주소창에 id값을 넣는다. -->
+        비  번 : <input type="text" name="pw"><br>  <!-- 주소창에 pw값을 넣는다. -->
+        <select name="year">
+            <option value="2023">올해</option>
+            <option value="2022">작년</option>
+        </select>
+        <input type="submit" value="이동">
+    </form>   
+    <br>
+    <form id ="form1' action="http://search.naver.com/search.naver" method="get">   <!-- ? 다음에 정보보여줌 -->
+        검색 : <input type="text" name="query"><br>
+        <input type="submit" value="네이버검색">
+        <br>
+    <form action="http://search.naver.com/search.naver" method="POST">  <!--  -->
+        검색 : <input type="text" name="query"><br>
+        <input type="submit" value="네이버 검색 post">
+    </form>
+        <hr>
+        <h2>javascripts</h2>  
+
+        <input type="button" id="btn1" value="페이지 이동">
+        <script>
+            let btn1 = document.querySelector("#btn1") // 앞의 버튼에서 가져오기.
+            btn1.addEventListener("click", function(){  // btn1에 위의  [let btn1 = document.querySelector("#btn1")]이 모두 담겨 있다. 콜백 함수가 불러져 온다.
+                location.href= "http://naver.com"       // 내 주소를 바꾸라는 의미 : 주소만 바꾼다. location
+            });
+        </script>
+        <br>
+        <input type="button" id="btn2" value="submit">
+        <script>
+            let btn2 = document.querySelector("#btn1") // 앞의 버튼에서 가져오기.
+            btn1.addEventListener("click", function(){  // btn1에 위의  [let btn1 = document.querySelector("#btn1")]이 모두 담겨 있다. 콜백 함수가 불러져 온다.
+            //btn1.addEventListener("click", function(event){  // btn1에 위의  [let btn1 = document.querySelector("#btn1")]이 모두 담겨 있다. 콜백 함수가 불러져 온다.
+                //event.preventDefault();  //원 기능 - 전달인자.preventDefault : submit을 막아주는 기능이다. 
+                                                // html이 한 번 실행되고, javascripts도 한 번 실행되서 event가 두 번실행되는이유다.
+
+                let form1 = document.querySelector("form1") // 폼을 모두 가져온 것
+                 
+                let dom_keyword = form1.querySelector("input[name=query]")    // 붙여쓰면 and input[name=query]"" dom_ ~ 폼이다.
+                // <form id ="form1' action="http://search.naver.com/search.naver" method="get">   <!-- ? 다음에 정보보여줌 -->
+                // 검색 : <input type="text" name="query"><br>
+                // <input type="submit" value="네이버검색"> -- 위의 dom은 이 내용을 의미한다. form1 
+                
+                
+                let keyword = dom_keyword.value
+                if(keyword.length >0){
+                    form1.submit();
+                }else {
+                    alert("검색어를 입력하세여");
+                    dom_keyword.focus();
+                }
+                // form1.submit();
+            });
+        </script>
+</body>
+</html>

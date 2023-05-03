@@ -9,5 +9,27 @@
 <body>
     <!-- ! + enter 기본 코드 생성된다. -->
     <!-- test 했음 hr.sql 설정 위해서 -->
+    <script>
+        const select =document.querySelector('select');
+        const html = document.querySelector('.output');
+        
+        select.onchange = function(){
+            const choice = select.value;
+
+            switch(choice){
+                case 'black':
+                    update('black', 'white');
+                    break;
+                case 'yellow':
+                    update('white', 'black');
+                    break;                
+            }
+            function update(bgColor, textColor){
+                html.style.backgroundColor = bgColor;
+                html.style.color = textColor;
+            }
+        }
+    </script>
+
 </body>
 </html>

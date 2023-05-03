@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Flexbox Layout Example</title>
+  <style>
+    /*  부모객체에 적용할 떄 */
+    .flex-container {
+      margin: 10px;
+      padding: 0px;
+      border-radius: 5px;
+      background: #60B99A;
+      /* text-align: left; */
+    }
+
+    /*  부모객체에 적용할 떄 */
+    .flex-container {
+        /* flex-direction: row-reverse; */
+        flex-wrap: wrap-reverse;
+        display: flex;
+        /* flex-wrap: nowrap;
+        
+        overflow: auto; */
+        /* justify-content: space-around; */
+        /* justify-content: flex-end; */
+        /* justify-content: flex-start; */
+        /* justify-content: space-around; */
+        justify-content: space-between;
+        /* align-items: stretch; */
+        /* align-items: flex-start; */
+        align-items: center;
+        align-content: baseline;
+}
+
+    /* .flex-center {
+    display: flex;
+    justify-content: center;
+    } */
+
+    /* 자식객체에 적용할 때, item */
+    .flex-item {
+      margin: 10px;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      border-radius: 5px;
+      background: #4584b1;
+      flex-grow: 8; /*아이템 한 개씩 마다 주어야 함*/
+      /* align-self: auto | flex-start | flex-end | center | baseline; */
+      /* align-self: baseline; */
+      align-self: flex-end ;
+      /* align-self: flex-start ; */
+
+      width: 200px;
+      display: inline-block;
+    }
+
+        /* 자식객체에 적용할 때, item */
+    .flex-item:box-chd(2) {
+        margin: 10px;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      border-radius: 5px;
+      background: #4584b1;
+      flex-grow: 8; /*아이템 한 개씩 마다 주어야 함*/
+      /* align-self: auto | flex-start | flex-end | center | baseline; */
+      /* align-self: baseline; */
+      align-self: baseline;
+      /* align-self: flex-end ; */
+      /* align-self: flex-start ; */
+
+      width: 100px;
+      display: inline-block;
+    }
+
+    .flex-item:box-chd(3) {
+    margin: 10px;
+      padding: 20px;
+      color: #fff;
+      text-align: left;
+      border-radius: 5px;
+      background: #4b09a1;
+      flex-grow: 8; /*아이템 한 개씩 마다 주어야 함*/
+      /* align-self: auto | flex-start | flex-end | center | baseline; */
+      /* align-self: baseline; */
+      
+      /* align-self: flex-end ; */
+      align-self: center ;
+      width: 100px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="flex-item">1</div>
+    <div class="flex-item:box-chd(2)">2</div>
+    <div class="flex-item:box-chd(3)">3</div>
+    <div class="flex-item">4</div>
+    <div class="flex-item">5</div>
+  </div>
+</body>
+<!-- </html> -->
